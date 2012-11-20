@@ -27,5 +27,11 @@
 		</grid>
 	</window>
 	<button label="Logout" href="/j_spring_security_logout"/>
+	<button label="win doModal" onClick="win.doModal()"></button>
+	<button label="show Messagebox">
+		<attribute name="onClick"><![CDATA[
+			Messagebox.show("" + org.springframework.security.core.context.SecurityContextHolder.getContext().getAuthentication().getName());
+		]]></attribute>
+	</button>
 	*Any one can view this page
 </zk>
